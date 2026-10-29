@@ -1,0 +1,15 @@
+/* Custom CSS (Tailwind handles most styling in index.html) */
+  html.lenis, html.lenis body { height:auto }
+  .lenis.lenis-smooth { scroll-behavior:auto !important }
+  body { background:#0C0C0E; color:#EFE8D8 }
+  :focus-visible { outline:3px solid #E3C98A; outline-offset:3px }
+  ::selection { background:#E3C98A; color:#0C0C0E }
+  .marquee { animation: slide 26s linear infinite }
+  @keyframes slide { to { transform: translateX(-50%) } }
+  @keyframes spin { to { transform: rotate(360deg) } }
+  .spin { animation: spin 18s linear infinite }
+  .outline-text { -webkit-text-stroke: 1.5px #EFE8D8; color: transparent }
+  @media (hover:hover) and (pointer:fine) { body, a, button { cursor:none } }
+  .row:hover { background:#E3C98A; color:#0C0C0E }
+  .row:hover .arrow { transform: rotate(-45deg) }
+  @media (prefers-reduced-motion: reduce) { .marquee,.spin { animation:none } }

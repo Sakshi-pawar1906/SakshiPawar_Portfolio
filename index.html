@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sakshi Pawar | Frontend Developer</title>
+<meta name="description" content="Portfolio of Sakshi Pawar, MCA student and frontend developer from Nashik.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="tailwind-config.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased">
+
+<!-- PRELOADER -->
+<div id="pre" class="fixed inset-0 z-[100] bg-ink grid place-items-center">
+  <div class="relative w-40 h-40 grid place-items-center">
+    <svg class="absolute inset-0 -rotate-90" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#ffffff18" stroke-width="3"/>
+      <circle id="ring" cx="50" cy="50" r="45" fill="none" stroke="#E3C98A" stroke-width="3" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283"/>
+    </svg>
+    <p id="pct" class="font-display text-4xl text-gold">0%</p>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div id="dot" class="hidden fixed top-0 left-0 w-2 h-2 rounded-full bg-gold z-[90] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+<div id="ringc" class="hidden fixed top-0 left-0 w-10 h-10 rounded-full border border-gold/70 z-[90] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 mix-blend-difference text-white">
+  <nav class="flex items-center justify-between px-5 sm:px-10 h-20">
+    <a href="#home" class="font-display text-2xl tracking-wide">SAKSHI PAWAR</a>
+    <ul class="hidden md:flex gap-10 text-sm font-medium tracking-wide">
+      <li><a class="hover:opacity-60 transition" href="#about">About</a></li>
+      <li><a class="hover:opacity-60 transition" href="#tech">Skills</a></li>
+      <li><a class="hover:opacity-60 transition" href="#projects">Projects</a></li>
+      <li><a class="hover:opacity-60 transition" href="#contact">Contact</a></li>
+    </ul>
+    <button id="menuBtn" class="md:hidden text-sm font-semibold border border-white/60 rounded-full px-4 py-2" aria-expanded="false">Menu</button>
+  </nav>
+</header>
+<div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-ink flex-col justify-center gap-6 px-8 font-display text-6xl">
+  <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#tech">SKILLS</a><a href="#projects">PROJECTS</a><a href="#contact" class="text-gold">CONTACT</a>
+</div>
+
+<main>
+<!-- HOME -->
+<section id="home" class="relative overflow-hidden min-h-screen px-5 sm:px-10 pt-28 pb-16 flex items-center">
+  <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[40rem] h-[40rem] bg-gold/10 rounded-full blur-3xl" aria-hidden="true"></div>
+  <div class="relative w-full max-w-7xl mx-auto grid lg:grid-cols-[1.25fr_0.75fr] gap-12 items-center">
+    <div>
+      <p class="hero-in text-sm font-semibold tracking-[0.25em] text-gold">HI, I’M SAKSHI PAWAR</p>
+      <h1 id="roll" aria-label="Frontend Developer" class="font-display uppercase leading-[0.95] mt-4" style="font-size:clamp(3.4rem,11.5vw,8.5rem)"></h1>
+      <p class="hero-in mt-8 max-w-md text-cream/75 text-lg leading-relaxed">MCA student from Nashik. I build responsive websites with HTML, CSS, JavaScript and Tailwind CSS, and I’m exploring Python and Java.</p>
+      <div class="hero-in mt-8 flex flex-wrap gap-3">
+        <a href="#projects" class="bg-gold text-ink font-semibold px-7 py-3.5 rounded-full hover:bg-cream transition">See my work</a>
+        <a href="#contact" class="border border-cream/40 font-semibold px-7 py-3.5 rounded-full hover:bg-cream hover:text-ink transition">Let’s talk</a>
+      </div>
+    </div>
+    <div class="hero-photo photo-wrap relative mx-auto w-full max-w-sm">
+      <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-b from-gold/30 to-transparent blur-2xl" aria-hidden="true"></div>
+      <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-cream/15 bg-smoke">
+        <img src="photo.jpg" alt="Portrait of Sakshi Pawar" class="photo w-full h-full object-cover object-top" onerror="this.style.display='none'">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent pointer-events-none"></div>
+        <p class="absolute bottom-4 left-5 text-sm font-medium">MCA Student · Frontend Developer</p>
+      </div>
+      <svg class="spin absolute -bottom-10 -left-8 sm:-left-14 w-28 h-28 sm:w-32 sm:h-32" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circ" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <circle cx="100" cy="100" r="98" fill="#0C0C0E"/>
+        <text font-size="15" letter-spacing="3" fill="#E3C98A" font-family="Inter,sans-serif" font-weight="600"><textPath href="#circ" textLength="490">OPEN TO INTERNSHIPS • AVAILABLE FOR WORK •</textPath></text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="border-y border-cream/10 py-6 overflow-hidden" aria-hidden="true">
+  <div class="marquee flex w-max gap-10 font-display uppercase text-5xl sm:text-7xl outline-text whitespace-nowrap">
+    <span>HTML</span><span>Tailwind</span><span>JavaScript</span><span>Python</span><span>Java</span><span>Responsive</span>
+    <span>HTML</span><span>Tailwind</span><span>JavaScript</span><span>Python</span><span>Java</span><span>Responsive</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="px-5 sm:px-10 py-28">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-sm font-semibold tracking-[0.25em] text-gold mb-8">ABOUT ME</p>
+    <p id="bigText" class="font-display uppercase leading-[1.1] text-4xl sm:text-6xl lg:text-7xl">I’m a second-year MCA student at R. H. Sapat College of Engineering, Nashik. I turn ideas into clean, fast websites that feel great on any screen.</p>
+    <div class="grid sm:grid-cols-3 gap-6 mt-16 text-cream/75">
+      <div class="reveal border-t border-cream/20 pt-5"><h3 class="text-cream font-semibold mb-2">Education</h3><p>MCA (Second Year)<br>R. H. Sapat College of Engineering, Nashik</p></div>
+      <div class="reveal border-t border-cream/20 pt-5"><h3 class="text-cream font-semibold mb-2">What I do</h3><p>Responsive websites, UI clones and Python projects, including an AI resume screener.</p></div>
+      <div class="reveal border-t border-cream/20 pt-5"><h3 class="text-cream font-semibold mb-2">Beyond code</h3><p>Exploring new tools and building side projects.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section id="tech" class="px-5 sm:px-10 py-24 bg-smoke">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="reveal font-display uppercase text-5xl sm:text-7xl">Technologies I work with</h2>
+    <div id="techGrid" class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="px-5 sm:px-10 py-28">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="reveal font-display uppercase text-5xl sm:text-7xl mb-12">Selected projects</h2>
+    <div id="projList" class="border-t border-cream/20"></div>
+    <a href="https://github.com/Sakshi-pawar1906" target="_blank" rel="noopener" class="inline-block mt-8 font-semibold border-b-2 border-gold hover:text-gold transition">See all repositories on GitHub →</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="px-5 sm:px-10 py-28 bg-gradient-to-b from-ink to-[#1a1033]">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14">
+    <div class="reveal">
+      <h2 class="font-display uppercase text-6xl sm:text-8xl leading-[0.95]">Let’s build something great</h2>
+      <a href="https://www.linkedin.com/in/sakshipawar19" target="_blank" rel="noopener" class="inline-block mt-8 text-xl sm:text-2xl font-semibold border-b-2 border-gold hover:text-gold transition">Connect with me on LinkedIn</a>
+      <div class="mt-6 flex gap-6 font-medium text-cream/80">
+        <a class="hover:text-gold transition" href="https://github.com/Sakshi-pawar1906" target="_blank" rel="noopener">GitHub</a>
+        <a class="hover:text-gold transition" href="https://www.linkedin.com/in/sakshipawar19" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <form id="form" class="reveal grid gap-4 self-start">
+      <label class="grid gap-1 text-sm font-medium">Name<input name="name" required type="text" class="bg-white/5 border border-cream/20 rounded-xl px-4 py-3 text-base focus:border-gold outline-none"></label>
+      <label class="grid gap-1 text-sm font-medium">Email<input name="email" required type="email" class="bg-white/5 border border-cream/20 rounded-xl px-4 py-3 text-base focus:border-gold outline-none"></label>
+      <label class="grid gap-1 text-sm font-medium">Message<textarea name="message" required rows="5" class="bg-white/5 border border-cream/20 rounded-xl px-4 py-3 text-base focus:border-gold outline-none"></textarea></label>
+      <button class="bg-gold text-ink font-semibold rounded-full py-3.5 hover:bg-cream transition">Send message</button>
+      <p id="formMsg" class="text-sm font-medium min-h-5" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="px-5 sm:px-10 py-8 text-sm text-cream/60 flex flex-wrap justify-between gap-2">
+  <p>© 2026 Sakshi Pawar</p><p>Built with HTML, Tailwind CSS, GSAP and Lenis</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
